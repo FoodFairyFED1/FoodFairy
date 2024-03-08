@@ -9,3 +9,5 @@ This was the group project for Agency 1 during the second semester of Frontend D
 [Line](https://github.com/LineSvensen)
 
 [Truls Johan](https://github.com/TrulsJohan)
+
+[Dean] 🕵️‍♀️
