@@ -10,4 +10,6 @@ This was the group project for Agency 1 during the second semester of Frontend D
 
 [Truls Johan](https://github.com/TrulsJohan)
 
+Test again if Truls git is working
+
 [Dean] 🕵️‍♀️
