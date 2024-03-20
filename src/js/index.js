@@ -17,8 +17,8 @@ export async function getRandRecipe() {
     try {
         const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=4`);
         const result = await response.json();
-        const productData = result.recipes;
-        console.log(productData);
+        const recipeData = result.recipes;
+        console.log(recipeData);
         // displayRandRecipe(productData);
     } catch (error) {
         console.error('Error fetching products:', error);
