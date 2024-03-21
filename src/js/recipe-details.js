@@ -12,3 +12,7 @@ toggleBurgerMenuBTN.addEventListener("click", function () {
 toggleFavsMenuBTN.addEventListener("click", function () {
   toggleFavsMenu();
 });
+
+const parameterString = window.location.search;
+const searchParameter = new URLSearchParams(parameterString);
+const id = searchParameter.get("id");
