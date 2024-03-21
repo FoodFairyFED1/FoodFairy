@@ -28,6 +28,7 @@ main {
     height: 40px;
     border-radius: 8px;
     border-style: none;
+    margin: 1rem 0;
 }
 
 .pantry-recipes-container {
@@ -48,6 +49,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.toggle-filter-menu {
+    display: none;
 }
 
 .filter-menu {
@@ -100,5 +105,21 @@ main {
     border-radius: 8px;
     background-color: var(--cta);
     font-family: "Indie Flower", cursive;
+}
+
+.dairy-container {
+    display: none;
+}
+
+.vegetables-container {
+    display: none;
+}
+
+.meat-container {
+    display: none;
+}
+
+.rice-container {
+    display: none;
 }
 

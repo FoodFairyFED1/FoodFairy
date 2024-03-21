@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <title>MyPantry | FoodFairy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/constants.css">
-    <link rel="stylesheet" type="text/css" href="../css/head.css">
     <link rel="stylesheet" type="text/css" href="../css/mypantry.css">
+    <script src="../js/mypantry.js" defer type="module"></script>
 </head>
 
 <body>
     <header>
         <div id="start">
-            <img src="assets/images/logo">
+            <img src="../assets/images/fairy-logo.svg">
         </div>
         <div id="end">
             <svg class="btn-toggle-fav-menu"
@@ -50,91 +49,101 @@
             MyPantry
         </button>
 
-        <div class="filter-menu">
-            <div class="food-category-container">
-                <button class="food-item-category-btn category-toggle">
-                    Dairy
-                </button>
-                <div class="food-list-items-container">
-                    <label class="food-list-item">
-                        Milk
-                        <input type="checkbox" value="milk">
-                    </label>
-                    <label class="food-list-item">
-                        Cheese
-                        <input type="checkbox" value="cheese">
-                    </label>
-                    <label class="food-list-item">
-                        Yogurt
-                        <input type="checkbox" value="yogurt">
-                    </label>
+        <div class="toggle-filter-menu">
+            <div class="filter-menu">
+                <div class="food-category-container">
+                    <button class="food-item-category-btn category-toggle-dairy">
+                        Dairy
+                    </button>
+                    <div class="dairy-container">
+                        <div class="food-list-items-container">
+                            <label class="food-list-item">
+                                Milk
+                                <input type="checkbox" value="milk">
+                            </label>
+                            <label class="food-list-item">
+                                Cheese
+                                <input type="checkbox" value="cheese">
+                            </label>
+                            <label class="food-list-item">
+                                Yogurt
+                                <input type="checkbox" value="yogurt">
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="food-category-container">
-                <button class="food-item-category-btn category-toggle">
-                    Vegetables
-                </button>
-                <div class="food-list-items-container">
-                    <label class="food-list-item">
-                        Carrot
-                        <input type="checkbox" value="carrot">
-                    </label>
-                    <label class="food-list-item">
-                        Broccoli
-                        <input type="checkbox" value="broccoli">
-                    </label>
-                    <label class="food-list-item">
-                        Spinach
-                        <input type="checkbox" value="spinach">
-                    </label>
+    
+                <div class="food-category-container">
+                    <button class="food-item-category-btn category-toggle-vegetables">
+                        Vegetables
+                    </button>
+                    <div class="vegetables-container">
+                        <div class="food-list-items-container">
+                            <label class="food-list-item">
+                                Carrot
+                                <input type="checkbox" value="carrot">
+                            </label>
+                            <label class="food-list-item">
+                                Broccoli
+                                <input type="checkbox" value="broccoli">
+                            </label>
+                            <label class="food-list-item">
+                                Spinach
+                                <input type="checkbox" value="spinach">
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="food-category-container">
-                <button class="food-item-category-btn category-toggle">
-                    Meat
-                </button>
-                <div class="food-list-items-container">
-                    <label class="food-list-item">
-                        Chicken
-                        <input type="checkbox" value="chicken">
-                    </label>
-                    <label class="food-list-item">
-                        Beef
-                        <input type="checkbox" value="beef">
-                    </label>
-                    <label class="food-list-item">
-                        Fish
-                        <input type="checkbox" value="fish">
-                    </label>
+    
+                <div class="food-category-container">
+                    <button class="food-item-category-btn category-toggle-meat">
+                        Meat
+                    </button>
+                    <div class="meat-container">
+                        <div class="food-list-items-container">
+                            <label class="food-list-item">
+                                Chicken
+                                <input type="checkbox" value="chicken">
+                            </label>
+                            <label class="food-list-item">
+                                Beef
+                                <input type="checkbox" value="beef">
+                            </label>
+                            <label class="food-list-item">
+                                Fish
+                                <input type="checkbox" value="fish">
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="food-category-container">
-                <button class="food-item-category-btn category-toggle">
-                    Rice/Grains
-                </button>
-                <div class="food-list-items-container">
-                    <label class="food-list-item">
-                        Rice
-                        <input type="checkbox" value="rice">
-                    </label>
-                    <label class="food-list-item">
-                        Quinoa
-                        <input type="checkbox" value="quinoa">
-                    </label>
-                    <label class="food-list-item">
-                        Oats
-                        <input type="checkbox" value="oats">
-                    </label>
+    
+                <div class="food-category-container">
+                    <button class="food-item-category-btn category-toggle-rice">
+                        Rice/Grains
+                    </button>
+                    <div class="rice-container">
+                        <div class="food-list-items-container">
+                            <label class="food-list-item">
+                                Rice
+                                <input type="checkbox" value="rice">
+                            </label>
+                            <label class="food-list-item">
+                                Quinoa
+                                <input type="checkbox" value="quinoa">
+                            </label>
+                            <label class="food-list-item">
+                                Oats
+                                <input type="checkbox" value="oats">
+                            </label>
+                        </div>
+                    </div>
                 </div>
+    
+                <button class="find-recipe-btn">✨Find recipes✨</button>
+                <span class="check-all-toggle">
+                    Check all | Uncheck all
+                </span>
             </div>
-
-            <button class="find-recipe-btn">✨Find recipes✨</button>
-            <span class="check-all-toggle">
-                Check all | Uncheck all
-            </span>
         </div>
 
         <div class="pantry-recipes-container">
