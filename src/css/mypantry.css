@@ -51,17 +51,17 @@ main {
     gap: 1rem;
 }
 
-.toggle-filter-menu {
-    display: none;
-}
-
-.filter-menu {
+.filter-menu.active {
     width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+}
+
+.filter-menu {
+    display: none;
 }
 
 .food-category-container {
@@ -78,13 +78,12 @@ main {
     height: 32px;
     background-color: var(--primary);
     border-style: none;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
 }
 
 .food-list-items-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     padding: 1rem;
 }
 
@@ -96,6 +95,7 @@ main {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    margin: 8px;
 }
 
 .find-recipe-btn {
@@ -105,21 +105,5 @@ main {
     border-radius: 8px;
     background-color: var(--cta);
     font-family: "Indie Flower", cursive;
-}
-
-.dairy-container {
-    display: none;
-}
-
-.vegetables-container {
-    display: none;
-}
-
-.meat-container {
-    display: none;
-}
-
-.rice-container {
-    display: none;
 }
 
