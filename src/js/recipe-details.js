@@ -1,4 +1,3 @@
-
 import { API_KEY } from "../../API_KEY.js";
 import { toggleBurgerMenu } from "./header-and-footer.js";
 import { toggleFavsMenu } from "./header-and-footer.js";
@@ -14,17 +13,20 @@ toggleFavsMenuBTN.addEventListener("click", function () {
   toggleFavsMenu();
 });
 
-const parameterString = window.location.search;
-const searchParameter = new URLSearchParams(parameterString);
-const id = searchParameter.get("id");
-
-async function getRecipe(id) {
+async function getRecipe() {
+  const parameterString = window.location.search;
+  const searchParameter = new URLSearchParams(parameterString);
+  const recipeId = searchParameter.get("id");
   try {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+      `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}`
     );
     const data = await response.json();
+    console.log(data);
   } catch (error) {
     console.log("an error has happened: " + error);
   }
+  return recipeId;
 }
+
+getRecipe();
