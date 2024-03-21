@@ -35,16 +35,16 @@ function displayRandRecipe(recipes) {
         const firstXWords = summaryWords.slice(0, 4);
         const truncatedSummary = firstXWords.join(' ') + '...';
         randRecipeContainer.innerHTML += `
-        <div class="rand-recipe-card">
+        <a class="rand-recipe-card" href="../pages/recipe-details.html?id=${recipe.id}">
             <div class="recipeCardStart">
                 <img class="recipeCardImage" src="${recipe.image}">
             </div>
             <div class="recipeCardEnd">
-                <h3>${recipe.title}</h3>
-                <span>${truncatedSummary}</span>
-                <button>See more</button>
+                <h3 class="recipeCardTitle">${recipe.title}</h3>
+                <span class="recipeCardSummary">${truncatedSummary}</span>
+                <div class="recipeCardCTA">See more</div>
             </div>
-        </div>
+        </a>
         `;
     });
 }
