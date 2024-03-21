@@ -1,0 +1,32 @@
+header {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+}
+
+#end {
+    display: flex;
+    gap: 16px;
+}
+
+img {
+    width: 36px;
+    height: 36px;
+}
+
+#start img {
+    width: 68px;
+    height: 68px;
+    padding-top: 4px;
+}
+
+footer {
+    height: 65px;
+    background-color: #85CB33;
+}
+
+
