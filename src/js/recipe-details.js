@@ -1,3 +1,5 @@
+
+import { API_KEY } from "../../API_KEY.js";
 import { toggleBurgerMenu } from "./header-and-footer.js";
 import { toggleFavsMenu } from "./header-and-footer.js";
 
@@ -11,6 +13,10 @@ toggleBurgerMenuBTN.addEventListener("click", function () {
 toggleFavsMenuBTN.addEventListener("click", function () {
   toggleFavsMenu();
 });
+
+const parameterString = window.location.search;
+const searchParameter = new URLSearchParams(parameterString);
+const id = searchParameter.get("id");
 
 async function getRecipe(id) {
   try {
