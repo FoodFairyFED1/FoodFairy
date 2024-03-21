@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "constants.css";
+@import "header-and-footer.css";
 
 main {
     display: flex;
