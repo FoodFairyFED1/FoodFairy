@@ -1,13 +1,6 @@
-:root {
-    --background: #fff9f1;
-    --primary: #85cb33;
-    --primary-hover: #b2e676;
-    --primary-clicked: #509500;
-    --cta: #ea9010;
-    --cta-hover: #ffbc5e;
-    --cta-clicked: #c47300;
-    --text: #1d1b19;
-  }
+@import "reset.css";
+@import "constants.css";
+@import "header-and-footer.css";
 
 body {
     width: 320px;
@@ -26,6 +19,7 @@ main {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    text-align: center;
 }
 
 .btn-toggle-pantry {
