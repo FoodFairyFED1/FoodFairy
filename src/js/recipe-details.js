@@ -4,6 +4,13 @@ import { toggleFavsMenu } from "./header-and-footer.js";
 
 const toggleBurgerMenuBTN = document.querySelector(".btn-toggle-burger-menu");
 const toggleFavsMenuBTN = document.querySelector(".btn-toggle-fav-menu");
+const recipeDetailInfo = document.querySelector(".recipe-detail-info");
+const recipeDetailIngredients = document.querySelector(
+  ".recipe-detail-ingredients"
+);
+const recipeDetailInstruction = document.querySelector(
+  "recipe-detail-instruction"
+);
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
   toggleBurgerMenu();
@@ -23,6 +30,7 @@ async function getRecipe() {
     );
     const data = await response.json();
     console.log(data);
+    displayRecipe(data);
   } catch (error) {
     console.log("an error has happened: " + error);
   }
@@ -30,3 +38,31 @@ async function getRecipe() {
 }
 
 getRecipe();
+
+function displayRecipe(recipe) {
+  recipeDetailInfo.innerHTML = `
+<h1>${recipe.title}</h1>
+<img src="${recipe.image}" alt="food">
+<div>
+    <p>
+        <span>Ready in: </span>
+        ${recipe.readyInMinutes}
+    </p>
+    <p>
+        <span>Servings: </span>
+        ${recipe.servings}
+    </p>
+    <p>
+        <span>Dish: </span>
+        ${recipe.dishTypes}
+    </p>
+</div>
+`;
+
+  for (let i = 0; i < recipe.extendedIngredients.lentgh; i++) {
+    recipeDetailIngredients.innerHTML = `
+<h2>Ingredients</h2>
+<p>${recipe.extendedIngredients[i].name}</p>
+`;
+  }
+}
