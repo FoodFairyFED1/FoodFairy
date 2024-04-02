@@ -2,24 +2,16 @@
 @import "constants.css";
 @import "header-and-footer.css";
 
-body {
-    width: 320px;
-    margin: 0;
-}
 
 main {
-    width: 320px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    gap: 16px;
+    width: 100%;
+    min-height: 100vh;
     background-color: var(--background);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    text-align: center;
+    padding: 16px;
 }
 
 .btn-toggle-pantry {
@@ -28,17 +20,20 @@ main {
     height: 40px;
     border-radius: 8px;
     border-style: none;
-    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
 }
 
 .pantry-recipes-container {
-    width: 320px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-family: "Indie Flower", cursive;
-    margin-bottom: 1rem;
 }
 
 .my-pantry-how-to {
@@ -75,10 +70,14 @@ main {
 
 .food-item-category-btn {
     width: 240px;
-    height: 32px;
+    height: 40px;
     background-color: var(--primary);
     border-style: none;
     border-radius: 8px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .food-list-items-container {
@@ -100,10 +99,14 @@ main {
 
 .find-recipe-btn {
     width: 240px;
-    height: 32px;
+    height: 40px;
     border-style: none;
     border-radius: 8px;
     background-color: var(--cta);
     font-family: "Indie Flower", cursive;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
