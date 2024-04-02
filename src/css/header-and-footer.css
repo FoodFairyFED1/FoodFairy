@@ -9,6 +9,7 @@ header {
     padding: 8px 16px 8px 8px;
     box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
     position: relative;
+    z-index: 20;
 }
 
 #end {
@@ -49,7 +50,7 @@ footer span {
     background-color: var(--background);
     top: 65px;
     right: 0;
-    z-index: 10;
+    z-index: 30;
     border-radius: 0 0 8px 8px;
 }
 
@@ -67,6 +68,14 @@ footer span {
     width: 250px;
     height: 40px;
     border-radius: 8px;
+}
+
+.burger-menu ul li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .burger-menu ul li:hover {
