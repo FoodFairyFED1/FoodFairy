@@ -9,7 +9,7 @@ const recipeDetailIngredients = document.querySelector(
   ".recipe-detail-ingredients"
 );
 const recipeDetailInstruction = document.querySelector(
-  "recipe-detail-instruction"
+  ".recipe-detail-instruction"
 );
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
@@ -32,7 +32,7 @@ async function getRecipe() {
     console.log(data);
     displayRecipe(data);
   } catch (error) {
-    console.log("an error has happened: " + error);
+    console.log("Error: " + error);
   }
   return recipeId;
 }
@@ -54,15 +54,18 @@ function displayRecipe(recipe) {
     </p>
     <p>
         <span>Dish: </span>
-        ${recipe.dishTypes}
+        ${recipe.dishTypes.join(", ")} 
     </p>
+    <p>${recipe.summary}</p>
 </div>
 `;
 
-  for (let i = 0; i < recipe.extendedIngredients.lentgh; i++) {
-    recipeDetailIngredients.innerHTML = `
-<h2>Ingredients</h2>
-<p>${recipe.extendedIngredients[i].name}</p>
-`;
-  }
+  const ingredient = recipe.extendedIngredients
+    .map((ingredient) => `<p>${ingredient.name}</p>`)
+    .join(" ");
+
+  recipeDetailIngredients.innerHTML += ingredient;
+  console.log(recipeDetailInstruction);
+  console.log(recipe.instructions);
+  recipeDetailInstruction.innerHTML += `<div>${recipe.instructions}</div>`;
 }
