@@ -64,8 +64,19 @@ function displayRecipe(recipe) {
     .map((ingredient) => `<p>${ingredient.name}</p>`)
     .join(" ");
 
-  recipeDetailIngredients.innerHTML += ingredient;
-  console.log(recipeDetailInstruction);
-  console.log(recipe.instructions);
-  recipeDetailInstruction.innerHTML += `<div>${recipe.instructions}</div>`;
+  let ingredientAmount = [];
+  for (let i = 0; i < recipe.extendedIngredients.length; i++) {
+    ingredientAmount.push(
+      `<p>${recipe.extendedIngredients[i].measures.metric.amount} ${recipe.extendedIngredients[i].measures.metric.unitLong}</p>`
+    );
+  }
+
+  recipeDetailIngredients.innerHTML += `
+<div>
+<div class="ingredients">${ingredient}</div>
+<div class="ingredient-amounts">${ingredientAmount.join(" ")}</div>
+</div>
+`;
+
+  recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions">${recipe.instructions}</div>`;
 }
