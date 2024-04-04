@@ -44,7 +44,7 @@ footer span {
 .burger-menu{
     position: absolute;
     width: 100%;
-    height: 320px;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     background-color: var(--background);
@@ -97,12 +97,37 @@ footer span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    padding: 8px;
 }
 .favs-container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+.favRecipeCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--background);
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
+
+}
+
+.favRecipeCardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favRecipeCardStart,
+.favRecipeCardEnd {
+    width: calc(50% - 8px);
+    padding: 8px;
 }
