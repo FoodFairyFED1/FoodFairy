@@ -4,12 +4,12 @@ import { toggleFavsMenu } from "./header-and-footer.js";
 
 const toggleBurgerMenuBTN = document.querySelector(".btn-toggle-burger-menu");
 const toggleFavsMenuBTN = document.querySelector(".btn-toggle-fav-menu");
-const recipeDetailInfo = document.querySelector(".recipe-detail-info");
+const recipeDetailInfo = document.querySelector(".recipe-detail-info-section");
 const recipeDetailIngredients = document.querySelector(
-  ".recipe-detail-ingredients"
+  ".recipe-detail-ingredients-section"
 );
 const recipeDetailInstruction = document.querySelector(
-  ".recipe-detail-instruction"
+  ".recipe-detail-instruction-section"
 );
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
@@ -41,42 +41,43 @@ getRecipe();
 
 function displayRecipe(recipe) {
   recipeDetailInfo.innerHTML = `
-<h1>${recipe.title}</h1>
+<h1 class="recipe-title">${recipe.title}</h1>
 <img src="${recipe.image}" alt="food">
-<div>
-    <p>
-        <span>Ready in: </span>
-        ${recipe.readyInMinutes}
-    </p>
-    <p>
-        <span>Servings: </span>
-        ${recipe.servings}
-    </p>
-    <p>
-        <span>Dish: </span>
-        ${recipe.dishTypes.join(", ")} 
-    </p>
+<div class="recipe-detail-info">
+  <div class="recipe-quick-info">
+      <p>
+          <span>Ready in: </span>
+          ${recipe.readyInMinutes} minutes
+      </p>
+      <p>
+          <span>Servings: </span> ${recipe.servings}
+      </p>
+      <p>
+          <span>Dish: </span>
+          ${recipe.dishTypes.join(", ")} 
+      </p>
+    </div>
+
     <p>${recipe.summary}</p>
 </div>
 `;
 
-  const ingredient = recipe.extendedIngredients
-    .map((ingredient) => `<p>${ingredient.name}</p>`)
-    .join(" ");
-
+  //I have no idea why this works, but it does, so dont question it
   let ingredientAmount = [];
   for (let i = 0; i < recipe.extendedIngredients.length; i++) {
     ingredientAmount.push(
-      `<p>${recipe.extendedIngredients[i].measures.metric.amount} ${recipe.extendedIngredients[i].measures.metric.unitLong}</p>`
+      `<div class="recipe-detail-ingredients">
+      <p class="ingredient-amount-measurements">${recipe.extendedIngredients[i].measures.metric.amount} ${recipe.extendedIngredients[i].measures.metric.unitLong}</p>
+      <p class="ingredient-amount-ingredient">${recipe.extendedIngredients[i].name}</p>
+      </div>`
     );
   }
 
   recipeDetailIngredients.innerHTML += `
-<div>
-<div class="ingredients">${ingredient}</div>
-<div class="ingredient-amounts">${ingredientAmount.join(" ")}</div>
-</div>
-`;
+  <div >
+  <div class="ingredient-amounts">${ingredientAmount.join(" ")}</div>
+  </div>
+  `;
 
   recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions">${recipe.instructions}</div>`;
 }

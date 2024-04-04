@@ -1,0 +1,49 @@
+@import "reset.css";
+@import "constants.css";
+@import "header-and-footer.css";
+
+body {
+  background-color: var(--background);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-title {
+  font-size: 32px;
+}
+
+.recipe-detail-ingredients {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredient-amounts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.recipe-quick-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recipe-quick-info span {
+  font-weight: 600;
+}
+
+.recipe-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recipe-instuctions li {
+  list-style: decimal;
+}
