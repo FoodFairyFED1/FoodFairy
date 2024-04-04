@@ -78,5 +78,5 @@ function displayRecipe(recipe) {
 </div>
 `;
 
-  recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions">${recipe.instructions}</div>`;
+  recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions"><p>${recipe.instructions}</p></div>`;
 }
