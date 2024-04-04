@@ -39,7 +39,7 @@ export async function getFavourites() {
     const favRecipes = favRecipesString.join();
         try {
             const response = await fetch(
-                `https://api.spoonacular.com/recipes/informationBulk/${favRecipes}?apiKey=${API_KEY}`
+                `https://api.spoonacular.com/recipes/informationBulk?ids=${favRecipes}&apiKey=${API_KEY}`
             );
             const recipeData = await response.json();
             displayFavourites(recipeData);
