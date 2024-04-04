@@ -46,13 +46,11 @@ async function getSelectedFoodItems() {
     });
 
     selectedFoodItems = selectedFoodItems.slice(0, -2);
-    console.log("selected food items", selectedFoodItems)
     return selectedFoodItems;
 }
 
 async function getMyPantryRecipes() {
     const selectedFoodItems = await getSelectedFoodItems();
-    console.log(selectedFoodItems);
     try {
         const response = await fetch(
             `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}&ingredients=${selectedFoodItems}&number=10`
@@ -61,19 +59,17 @@ async function getMyPantryRecipes() {
             throw new Error('Network response was not ok');
         }
         const recipeData = await response.json();
-        console.log(recipeData);
         displayMyPantryRecipes(recipeData);
     } catch (error) {
         console.error("Error fetching data:", error);
     }
 }
 
-
 function displayMyPantryRecipes(recipes) {
     pantryRecipeContainer.innerHTML = "";
     recipes.forEach((recipe) => {
         pantryRecipeContainer.innerHTML += `
-        <a class="pantry-recipe-card" href="pages/recipe-details.html?id=${recipe.id}">
+        <a class="pantry-recipe-card" href="../pages/recipe-details.html?id=${recipe.id}">
             <div class="pantryRecipeCardStart">
                 <img class="pantryRecipeCardImage" src="${recipe.image}">
             </div>
@@ -87,7 +83,5 @@ function displayMyPantryRecipes(recipes) {
 }
 
 findRecipeButton.addEventListener("click", function () {
-    console.log("Before calling getMyPantryRecipes");
     getMyPantryRecipes();
-    console.log("After calling getMyPantryRecipes");
 })
