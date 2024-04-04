@@ -1,22 +1,29 @@
 import {API_KEY} from "../../API_KEY.js";
 
+const body = document.body;
 const burger_menu = document.querySelector(".burger-menu");
 const favs_menu = document.querySelector(".favs-menu");
 const favs_container = document.querySelector(".favs-container");
 
 export function toggleBurgerMenu() {
+
     if (burger_menu.style.display === "none" || burger_menu.style.display === "") {
         burger_menu.style.display = "flex";
+        body.style.overflow = "hidden"; // Prevent scrolling
     } else {
         burger_menu.style.display = "none";
+        body.style.overflow = "auto"; // Re-enable scrolling
     }
 }
 
 export function toggleFavsMenu() {
+
     if (favs_menu.style.display === "none" || favs_menu.style.display === "") {
         favs_menu.style.display = "flex";
+        body.style.overflow = "hidden"; // Prevent scrolling
     } else {
         favs_menu.style.display = "none";
+        body.style.overflow = "auto"; // Re-enable scrolling
     }
 }
 
