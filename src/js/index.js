@@ -1,6 +1,7 @@
 import { API_KEY } from "../../API_KEY.js";
 import { toggleBurgerMenu } from "./header-and-footer.js";
 import { toggleFavsMenu } from "./header-and-footer.js";
+import { getFavourites } from "./header-and-footer.js";
 
 const toggleBurgerMenuBTN = document.querySelector(".btn-toggle-burger-menu");
 const toggleFavsMenuBTN = document.querySelector(".btn-toggle-fav-menu");
@@ -21,7 +22,6 @@ async function getRandRecipe() {
     );
     const result = await response.json();
     const recipeData = result.recipes;
-    console.log(recipeData);
     displayRandRecipe(recipeData);
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -50,3 +50,8 @@ function displayRandRecipe(recipes) {
         `;
   });
 }
+
+window.addEventListener('load', () => {
+  getFavourites();
+});
+
