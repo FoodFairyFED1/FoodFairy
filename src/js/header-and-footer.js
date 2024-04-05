@@ -9,10 +9,10 @@ export function toggleBurgerMenu() {
 
     if (burger_menu.style.display === "none" || burger_menu.style.display === "") {
         burger_menu.style.display = "flex";
-        body.style.overflow = "hidden"; // Prevent scrolling
+        body.style.overflow = "hidden";
     } else {
         burger_menu.style.display = "none";
-        body.style.overflow = "auto"; // Re-enable scrolling
+        body.style.overflow = "auto";
     }
 }
 
@@ -20,10 +20,10 @@ export function toggleFavsMenu() {
 
     if (favs_menu.style.display === "none" || favs_menu.style.display === "") {
         favs_menu.style.display = "flex";
-        body.style.overflow = "hidden"; // Prevent scrolling
+        body.style.overflow = "hidden";
     } else {
         favs_menu.style.display = "none";
-        body.style.overflow = "auto"; // Re-enable scrolling
+        body.style.overflow = "auto";
     }
 }
 

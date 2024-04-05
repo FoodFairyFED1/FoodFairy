@@ -9,7 +9,6 @@ const categoryToggles = document.querySelectorAll(".food-item-category-btn");
 const foodItemCheckboxes = document.querySelectorAll(".food-list-checkbox");
 const pantryRecipeContainer = document.querySelector(".pantry-recipes-container");
 const findRecipeButton = document.querySelector(".find-recipe-btn");
-const checkboxToggleBTN = document.querySelector(".check-all-toggle")
 
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
@@ -85,11 +84,5 @@ function displayMyPantryRecipes(recipes) {
 
 findRecipeButton.addEventListener("click", function () {
     getMyPantryRecipes();
+    filterMenu.classList.toggle("active");
 })
-
-checkboxToggleBTN.addEventListener('click', function() {
-
-    foodItemCheckboxes.forEach(function(checkbox) {
-        checkbox.checked = !checkbox.checked;
-    });
-});
