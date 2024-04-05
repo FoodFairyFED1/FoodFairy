@@ -24,7 +24,8 @@ h6 {
 p,
 a,
 li,
-span {
+span,
+button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
