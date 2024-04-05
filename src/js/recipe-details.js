@@ -40,10 +40,11 @@ async function getRecipe() {
 getRecipe();
 
 function displayRecipe(recipe) {
-  recipeDetailInfo.innerHTML = `
+  recipeDetailInfo.innerHTML += `
 <h1 class="recipe-title">${recipe.title}</h1>
 <img src="${recipe.image}" alt="food">
 <div class="recipe-detail-info">
+<img src="../assets/images/star-icon-orange.svg" alt="" class="favourite-recipe-btn">
   <div class="recipe-quick-info">
       <p>
           <span>Ready in: </span>
