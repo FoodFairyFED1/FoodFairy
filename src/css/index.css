@@ -80,9 +80,9 @@ main {
 }
 
 .recipeCardEnd {
-    height: 100%;
-    display: grid;
-    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .recipeCardImage {
