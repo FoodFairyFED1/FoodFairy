@@ -34,6 +34,7 @@ async function getRecipe() {
     } catch (error) {
         console.log("Error: " + error);
     }
+    loader.style.display = "none";
     return recipeId;
 }
 
