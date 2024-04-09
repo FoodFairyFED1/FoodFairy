@@ -52,6 +52,7 @@ main {
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+    max-height: 90vh;
 }
 
 .filter-menu {
@@ -59,6 +60,7 @@ main {
     display: none;
     position: absolute;
     top: 122px;
+    overflow: scroll;
 }
 
 .food-category-container {
