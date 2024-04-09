@@ -86,3 +86,21 @@ findRecipeButton.addEventListener("click", function () {
     getMyPantryRecipes();
     filterMenu.classList.toggle("active");
 })
+
+const checkAllToggle = document.querySelector(".check-all-toggle");
+
+checkAllToggle.addEventListener ("click", ()=> {
+    console.log("it works");
+    if(checkAllToggle.innerText === "Check all"){
+        checkAllToggle.innerText = `Uncheck all`;
+        foodItemCheckboxes.forEach(checkbox => {
+            checkbox.checked = true;
+        })
+    } else {
+        checkAllToggle.innerText = `Check all`;
+        foodItemCheckboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        })
+    }
+})
+
