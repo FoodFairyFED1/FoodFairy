@@ -9,6 +9,7 @@ const categoryToggles = document.querySelectorAll(".food-item-category-btn");
 const foodItemCheckboxes = document.querySelectorAll(".food-list-checkbox");
 const pantryRecipeContainer = document.querySelector(".pantry-recipes-container");
 const findRecipeButton = document.querySelector(".find-recipe-btn");
+const loader = document.querySelector(".loader");
 
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
@@ -50,6 +51,7 @@ async function getSelectedFoodItems() {
 }
 
 async function getMyPantryRecipes() {
+    loader.style.display = "flex";
     const selectedFoodItems = await getSelectedFoodItems();
     try {
         const response = await fetch(
@@ -63,6 +65,7 @@ async function getMyPantryRecipes() {
     } catch (error) {
         console.error("Error fetching data:", error);
     }
+    loader.style.display = "none";
 }
 
 function displayMyPantryRecipes(recipes) {

@@ -9,6 +9,7 @@ const recipeDetailInfo = document.querySelector(".recipe-detail-info-section");
 const recipeDetailIngredients = document.querySelector(".recipe-detail-ingredients-section");
 const recipeDetailInstruction = document.querySelector(".recipe-detail-instruction-section");
 const favouriteBTN = document.querySelector(".favourite-recipe-btn");
+const loader = document.querySelector(".loader");
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
     toggleBurgerMenu();
@@ -19,6 +20,7 @@ toggleFavsMenuBTN.addEventListener("click", function () {
 });
 
 async function getRecipe() {
+    loader.style.display = "flex";
     const parameterString = window.location.search;
     const searchParameter = new URLSearchParams(parameterString);
     const recipeId = searchParameter.get("id");
@@ -32,6 +34,7 @@ async function getRecipe() {
     } catch (error) {
         console.log("Error: " + error);
     }
+    loader.style.display = "none";
     return recipeId;
 }
 
