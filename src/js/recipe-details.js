@@ -41,18 +41,23 @@ async function getRecipe() {
 getRecipe();
 
 function displayRecipe(recipe) {
-    recipeDetailInfo.innerHTML = `
-<h1 class="recipe-title">${recipe.title}</h1>
+  recipeDetailInfo.innerHTML += `
 <img src="${recipe.image}" alt="food">
+<div class="img-fav-div">
+<h1 class="recipe-title">${recipe.title}</h1>
+<img src="../assets/images/star-icon-orange.svg" alt="" class="favourite-recipe-btn">
+</div>
 <div class="recipe-detail-info">
   <div class="recipe-quick-info">
       <p>
           <span>Ready in: </span>
           ${recipe.readyInMinutes} minutes
       </p>
+
       <p>
           <span>Servings: </span> ${recipe.servings}
       </p>
+
       <p>
           <span>Dish: </span>
           ${recipe.dishTypes.join(", ")} 
@@ -80,7 +85,8 @@ function displayRecipe(recipe) {
   </div>
   `;
 
-    recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions">${recipe.instructions}</div>`;
+  recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions"><p>${recipe.instructions}</p></div>`;
+
 }
 
 favouriteBTN.addEventListener("click", function(){

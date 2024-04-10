@@ -12,8 +12,27 @@ main {
   gap: 20px;
 }
 
+h2 {
+  font-size: 24px;
+  padding: 2px 0;
+}
+
 .recipe-title {
   font-size: 32px;
+  margin: 20px 0 10px 0;
+}
+
+.favourite-recipe-btn {
+  height: 36px;
+  align-self: flex-end;
+  align-self: center;
+  /* position: relative; */
+  /* bottom: 68px; */
+}
+
+.img-fav-div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .recipe-detail-ingredients {
@@ -24,8 +43,7 @@ main {
 .ingredient-amounts {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 4px;
+  gap: 8px;
 }
 
 .recipe-quick-info {
@@ -46,4 +64,9 @@ main {
 
 .recipe-instuctions li {
   list-style: decimal;
+  padding: 4px;
+}
+
+.recipe-instuctions {
+  margin-bottom: 40px;
 }
