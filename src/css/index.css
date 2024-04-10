@@ -12,6 +12,7 @@ main {
 
 .hero-banner {
     position: relative;
+    background-color: #ffffff;
     background-image: url("../assets/images/herobanner.png");
     background-position: center;
     background-size: cover;
