@@ -2,7 +2,6 @@
 @import "constants.css";
 @import "header-and-footer.css";
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -53,10 +52,15 @@ main {
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+    max-height: 90vh;
 }
 
 .filter-menu {
+    background-color: var(--background);
     display: none;
+    position: absolute;
+    top: 122px;
+    overflow: scroll;
 }
 
 .food-category-container {
@@ -109,4 +113,3 @@ main {
     align-items: center;
     justify-content: center;
 }
-

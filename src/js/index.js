@@ -6,6 +6,7 @@ import { getFavourites } from "./header-and-footer.js";
 const toggleBurgerMenuBTN = document.querySelector(".btn-toggle-burger-menu");
 const toggleFavsMenuBTN = document.querySelector(".btn-toggle-fav-menu");
 const randRecipeContainer = document.querySelector(".rand-recipe-section");
+const loader = document.querySelector(".loader");
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
   toggleBurgerMenu();
@@ -16,6 +17,7 @@ toggleFavsMenuBTN.addEventListener("click", function () {
 });
 
 async function getRandRecipe() {
+  loader.style.display = "flex";
   try {
     const response = await fetch(
       `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=4`
@@ -26,6 +28,7 @@ async function getRandRecipe() {
   } catch (error) {
     console.error("Error fetching products:", error);
   }
+  loader.style.display = "none";
 }
 
 getRandRecipe();
@@ -33,9 +36,6 @@ getRandRecipe();
 function displayRandRecipe(recipes) {
   randRecipeContainer.innerHTML = "";
   recipes.forEach((recipe) => {
-    const summaryWords = recipe.summary.split(" ");
-    const firstXWords = summaryWords.slice(0, 4);
-    const truncatedSummary = firstXWords.join(" ") + "...";
     randRecipeContainer.innerHTML += `
         <a class="rand-recipe-card" href="pages/recipe-details.html?id=${recipe.id}">
             <div class="recipeCardStart">
@@ -43,7 +43,6 @@ function displayRandRecipe(recipes) {
             </div>
             <div class="recipeCardEnd">
                 <h3 class="recipeCardTitle">${recipe.title}</h3>
-                <span class="recipeCardSummary">${truncatedSummary}</span>
                 <div class="recipeCardCTA">See more</div>
             </div>
         </a>

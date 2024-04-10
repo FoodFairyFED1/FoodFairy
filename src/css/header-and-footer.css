@@ -131,3 +131,15 @@ footer span {
     width: calc(50% - 8px);
     padding: 8px;
 }
+
+.loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 40;
+}
+

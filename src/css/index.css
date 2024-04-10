@@ -12,33 +12,30 @@ main {
 
 .hero-banner {
     position: relative;
-    background-color: white;
+    background-image: url("../assets/images/herobanner.png");
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height: 250px;
     display: grid;
     padding: 16px;
 }
 
-.hero-banner h1 {
-    font-size: 28px;
-    position: absolute;
-    top: 8px;
-    left: 24px;
-    width: 200px;
+/* commented out in case we will need h1 later for scaling up/@media
 
-}
+/*.hero-banner h1 {*/
+/*    font-size: 28px;*/
+/*    position: absolute;*/
+/*    top: 8px;*/
+/*    left: 24px;*/
+/*    width: 200px;*/
+/*}*/
 
-.hero-banner h1 span {
-    color: var(--primary);
-    font-family: "Indie Flower", serif;
-    font-size: 24px;
-}
-
-.hero-banner img {
-    position: absolute;
-    top: 32px;
-    right: 32px;
-}
+/*.hero-banner h1 span {*/
+/*    color: var(--primary);*/
+/*    font-family: "Indie Flower", serif;*/
+/*    font-size: 24px;*/
+/*}*/
 
 .hero-banner-CTA {
     background-color: var(--cta);
@@ -83,9 +80,9 @@ main {
 }
 
 .recipeCardEnd {
-    height: 100%;
-    display: grid;
-    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .recipeCardImage {
