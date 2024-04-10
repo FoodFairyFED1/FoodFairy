@@ -114,7 +114,7 @@ footer span {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    background-color: var(--background);
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
 
