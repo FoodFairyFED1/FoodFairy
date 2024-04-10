@@ -9,6 +9,7 @@ const recipeDetailInfo = document.querySelector(".recipe-detail-info-section");
 const recipeDetailIngredients = document.querySelector(".recipe-detail-ingredients-section");
 const recipeDetailInstruction = document.querySelector(".recipe-detail-instruction-section");
 const favouriteBTN = document.querySelector(".favourite-recipe-btn");
+const body = document.querySelector("body");
 const loader = document.querySelector(".loader");
 
 toggleBurgerMenuBTN.addEventListener("click", function () {
@@ -89,6 +90,9 @@ function displayRecipe(recipe) {
 
 }
 
-favouriteBTN.addEventListener("click", function(){
-  saveFavourites()
+body.addEventListener("click", event => {
+    if(event.target.classList.contains("favourite-recipe-btn")){
+        saveFavourites()
+    }
 })
+
