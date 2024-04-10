@@ -34,10 +34,13 @@ export function saveFavourites() {
     const recipeId = searchParameter.get("id");
 
     const index = favRecipes.indexOf(recipeId);
+    const favStar = document.querySelector(".favourite-recipe-btn");
     if (index === -1){
         favRecipes.push(recipeId);
+        favStar.src = "../assets/images/star-icon-orange-filled.svg";
     } else {
         favRecipes.splice(index, 1);
+        favStar.src = "../assets/images/star-icon-orange.svg";
     }
 
     window.localStorage.setItem("FoodFairyFavs", JSON.stringify(favRecipes));
