@@ -43,8 +43,8 @@ function displayRecipe(recipe) {
   recipeDetailInfo.innerHTML += `
 <img src="${recipe.image}" alt="food">
 <div class="img-fav-div">
-<img src="../assets/images/star-icon-orange.svg" alt="" class="favourite-recipe-btn">
 <h1 class="recipe-title">${recipe.title}</h1>
+<img src="../assets/images/star-icon-orange.svg" alt="" class="favourite-recipe-btn">
 </div>
 <div class="recipe-detail-info">
   <div class="recipe-quick-info">
@@ -84,5 +84,5 @@ function displayRecipe(recipe) {
   </div>
   `;
 
-  recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions">${recipe.instructions}</div>`;
+  recipeDetailInstruction.innerHTML += `<div class="recipe-instuctions"><p>${recipe.instructions}</p></div>`;
 }

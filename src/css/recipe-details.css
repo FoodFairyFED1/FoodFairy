@@ -19,14 +19,20 @@ h2 {
 
 .recipe-title {
   font-size: 32px;
-  margin-top: 20px;
+  margin: 20px 0 10px 0;
 }
 
 .favourite-recipe-btn {
   height: 36px;
   align-self: flex-end;
-  position: relative;
-  bottom: ;
+  align-self: center;
+  /* position: relative; */
+  /* bottom: 68px; */
+}
+
+.img-fav-div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .recipe-detail-ingredients {
