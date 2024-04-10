@@ -33,8 +33,11 @@ export function saveFavourites() {
     const searchParameter = new URLSearchParams(parameterString);
     const recipeId = searchParameter.get("id");
 
-    if (!favRecipes.includes(recipeId)) {
+    const index = favRecipes.indexOf(recipeId);
+    if (index === -1){
         favRecipes.push(recipeId);
+    } else {
+        favRecipes.splice(index, 1);
     }
 
     window.localStorage.setItem("FoodFairyFavs", JSON.stringify(favRecipes));
