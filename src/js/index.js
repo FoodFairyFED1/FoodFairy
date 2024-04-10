@@ -36,9 +36,6 @@ getRandRecipe();
 function displayRandRecipe(recipes) {
   randRecipeContainer.innerHTML = "";
   recipes.forEach((recipe) => {
-    const summaryWords = recipe.summary.split(" ");
-    const firstXWords = summaryWords.slice(0, 4);
-    const truncatedSummary = firstXWords.join(" ") + "...";
     randRecipeContainer.innerHTML += `
         <a class="rand-recipe-card" href="pages/recipe-details.html?id=${recipe.id}">
             <div class="recipeCardStart">
@@ -46,7 +43,6 @@ function displayRandRecipe(recipes) {
             </div>
             <div class="recipeCardEnd">
                 <h3 class="recipeCardTitle">${recipe.title}</h3>
-                <span class="recipeCardSummary">${truncatedSummary}</span>
                 <div class="recipeCardCTA">See more</div>
             </div>
         </a>
