@@ -1,4 +1,47 @@
 # FoodFairy
 This was the group project for Agency 1 during the second semester of Frontend Development at Noroff School of Technology and Digital Media
+The project is deployed on netlify [here](foodfairy.netlify.app)
 
-[Thomas](https://github.com/Eikhaugen)
+## Table of contents:
+- [About](#about)
+- [Features](#features)
+- [Technical Specification](#technical-specification)
+
+
+## About
+
+Our group project for Agency 1, undertaken during the second semester of our Frontend Development course at Noroff School of Technology and Digital Media, was centered around the Agile methodology. The primary objective was to immerse ourselves in an Agile team environment, honing our collaborative skills and problem-solving abilities.
+
+FoodFairy is the result of this group project, it is a website were the user can get recipe recommendations based on the ingredients in their pantry.
+
+
+
+## Features
+
+* Homepage:
+  * Features random recipes.
+* MyPantry function:
+  * Allows the user to get recipe recommendations based on the ingredients they have at hand.
+  * The API is queried with the food items, and returns recipes using as many food items as possible.
+  * The API will try to find recipes where the user has to get as few additional ingredients as possible.
+* Recipe details page:
+  * The recipe details page features recipe instructions and ingredient amounts.
+  * The user can add recipes to favourites accessible from the navbar.
+* The project features hand drawn images and icons.
+
+
+## Technical Specification
+
+The project was made mobile-first and currently does not feature a desktop version.
+The width of the website is capped at 420px wide.
+
+### Tech used:
+- HTML
+- CSS
+- JavaScript
+- Figma
+- Git
+
+### Deployment:
+
+The site is deployed through Netlify [here](foodfairy.netlify.app)
