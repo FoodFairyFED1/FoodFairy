@@ -33,7 +33,7 @@ button {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--background);
   min-width: 100%;
   display: flex;
   flex-direction: column;
