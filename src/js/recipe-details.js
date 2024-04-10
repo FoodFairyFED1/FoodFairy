@@ -42,17 +42,21 @@ getRecipe();
 function displayRecipe(recipe) {
   recipeDetailInfo.innerHTML += `
 <img src="${recipe.image}" alt="food">
-<h1 class="recipe-title">${recipe.title}</h1>
-<div class="recipe-detail-info">
+<div class="img-fav-div">
 <img src="../assets/images/star-icon-orange.svg" alt="" class="favourite-recipe-btn">
+<h1 class="recipe-title">${recipe.title}</h1>
+</div>
+<div class="recipe-detail-info">
   <div class="recipe-quick-info">
       <p>
           <span>Ready in: </span>
           ${recipe.readyInMinutes} minutes
       </p>
+
       <p>
           <span>Servings: </span> ${recipe.servings}
       </p>
+
       <p>
           <span>Dish: </span>
           ${recipe.dishTypes.join(", ")} 
