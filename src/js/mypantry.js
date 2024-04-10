@@ -70,20 +70,39 @@ async function getMyPantryRecipes() {
 
 function displayMyPantryRecipes(recipes) {
     pantryRecipeContainer.innerHTML = "";
+
     recipes.forEach((recipe) => {
+        let usedIngredientsList = recipe.usedIngredients.map(ingredient => `<li>${ingredient.name}</li>`).join('');
+        let missingIngredientsList = recipe.missedIngredients.map(ingredient => `<li>${ingredient.name}</li>`).join('');
+
         pantryRecipeContainer.innerHTML += `
-        <a class="pantry-recipe-card" href="../pages/recipe-details.html?id=${recipe.id}">
-            <div class="pantryRecipeCardStart">
-                <img class="pantryRecipeCardImage" src="${recipe.image}">
-            </div>
-            <div class="pantryRecipeCardEnd">
-                <h3 class="pantryRecipeCardTitle">${recipe.title}</h3>
-                <div class="pantryRecipeCardCTA">See more</div>
-            </div>
-        </a>
+            <a class="pantry-recipe-card" href="../pages/recipe-details.html?id=${recipe.id}">
+                <div class="pantryRecipeCardStart">
+                    <img class="pantryRecipeCardImage" src="${recipe.image}">
+                </div>
+                <div class="pantryRecipeCardEnd">
+                    <h3 class="pantryRecipeCardTitle">${recipe.title}</h3>
+                    <div class="pantryRecipeCardIngredientsContainer">
+                    <div class="usedIngredientsListContainer">
+                    <h4>Used Ingredients:</h4>
+                    <ul class="usedIngredientsList">
+                        ${usedIngredientsList}
+                    </ul>
+                    </div>
+                    <div class="missingIngrediensList">
+                    <h4>Missing Ingredients:</h4>
+                    <ul class="missingIngredientsList">
+                        ${missingIngredientsList}
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="pantryRecipeCardCTA">See more</div>
+                </div>
+            </a>
         `;
     });
 }
+
 
 findRecipeButton.addEventListener("click", function () {
     getMyPantryRecipes();
@@ -92,9 +111,9 @@ findRecipeButton.addEventListener("click", function () {
 
 const checkAllToggle = document.querySelector(".check-all-toggle");
 
-checkAllToggle.addEventListener ("click", ()=> {
+checkAllToggle.addEventListener("click", () => {
     console.log("it works");
-    if(checkAllToggle.innerText === "Check all"){
+    if (checkAllToggle.innerText === "Check all") {
         checkAllToggle.innerText = `Uncheck all`;
         foodItemCheckboxes.forEach(checkbox => {
             checkbox.checked = true;
