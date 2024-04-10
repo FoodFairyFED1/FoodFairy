@@ -23,6 +23,7 @@ main {
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .pantry-recipes-container {
@@ -63,6 +64,10 @@ main {
     overflow: scroll;
 }
 
+.filter-menu.active button {
+    cursor: pointer;
+}
+
 .food-category-container {
     width: 240px;
     border-radius: 8px;
@@ -88,6 +93,10 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+}
+
+.food-list-checkbox {
+    cursor: pointer;
 }
 
 .food-list-item {
