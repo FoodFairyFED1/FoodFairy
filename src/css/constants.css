@@ -46,3 +46,7 @@ footer {
   min-width: 320px;
   max-width: 420px;
 }
+
+#start img, #end img {
+  cursor: pointer;
+}
