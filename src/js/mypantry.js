@@ -77,10 +77,8 @@ function displayMyPantryRecipes(recipes) {
 
         pantryRecipeContainer.innerHTML += `
             <a class="pantry-recipe-card" href="../pages/recipe-details.html?id=${recipe.id}">
-                <div class="pantryRecipeCardStart">
                     <img class="pantryRecipeCardImage" src="${recipe.image}">
                 </div>
-                <div class="pantryRecipeCardEnd">
                     <h3 class="pantryRecipeCardTitle">${recipe.title}</h3>
                     <div class="pantryRecipeCardIngredientsContainer">
                     <div class="usedIngredientsListContainer">
@@ -89,7 +87,7 @@ function displayMyPantryRecipes(recipes) {
                         ${usedIngredientsList}
                     </ul>
                     </div>
-                    <div class="missingIngrediensList">
+                    <div class="missingIngredientsListContainer">
                     <h4>Missing Ingredients:</h4>
                     <ul class="missingIngredientsList">
                         ${missingIngredientsList}
