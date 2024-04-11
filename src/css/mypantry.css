@@ -126,6 +126,7 @@ main {
   position: absolute;
   top: 122px;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 .filter-menu.active button {
