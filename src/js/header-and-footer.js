@@ -33,8 +33,14 @@ export function saveFavourites() {
     const searchParameter = new URLSearchParams(parameterString);
     const recipeId = searchParameter.get("id");
 
-    if (!favRecipes.includes(recipeId)) {
+    const index = favRecipes.indexOf(recipeId);
+    const favStar = document.querySelector(".favourite-recipe-btn");
+    if (index === -1){
         favRecipes.push(recipeId);
+        favStar.src = "../assets/images/star-icon-orange-filled.svg";
+    } else {
+        favRecipes.splice(index, 1);
+        favStar.src = "../assets/images/star-icon-orange.svg";
     }
 
     window.localStorage.setItem("FoodFairyFavs", JSON.stringify(favRecipes));
@@ -59,15 +65,23 @@ export async function getFavourites() {
 function displayFavourites(recipes) {
     favs_container.innerHTML = "";
     recipes.forEach((recipe) => {
+        let href;
+        if (window.location.pathname.includes("index.html")) {
+            href = `pages/recipe-details.html?id=${recipe.id}`;
+        } else {
+            href = `../pages/recipe-details.html?id=${recipe.id}`;
+        }
         favs_container.innerHTML += `
-        <a class="favRecipeCard" href="pages/recipe-details.html?id=${recipe.id}">
-            <div class="favRecipeCardStart">
-                <img class="favRecipeCardImage" src="${recipe.image}">
-            </div>
-            <div class="favRecipeCardEnd">
-                <h3 class="favRecipeCardTitle">${recipe.title}</h3>
-            </div>
-        </a>
+            <a class="favRecipeCard" href="${href}">
+                <div class="favRecipeCardStart">
+                    <img class="favRecipeCardImage" src="${recipe.image}">
+                </div>
+                <div class="favRecipeCardEnd">
+                    <h3 class="favRecipeCardTitle">${recipe.title}</h3>
+                </div>
+            </a>
         `;
     });
 }
+
+

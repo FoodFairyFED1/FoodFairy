@@ -26,8 +26,10 @@ h2 {
   height: 36px;
   align-self: flex-end;
   align-self: center;
+  pointer-events: visible;
   /* position: relative; */
   /* bottom: 68px; */
+  cursor: pointer;
 }
 
 .img-fav-div {

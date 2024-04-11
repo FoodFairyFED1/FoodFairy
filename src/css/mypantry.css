@@ -23,6 +23,12 @@ main {
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    cursor: pointer;
+}
+
+
+.btn-toggle-pantry:hover {
+    background-color: var(--primary-hover);
 }
 
 .pantry-recipes-container {
@@ -30,9 +36,65 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 16px;
     align-items: center;
     text-align: center;
     font-family: "Indie Flower", cursive;
+}
+
+.pantry-recipe-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.13);
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 16px;
+}
+
+.pantry-recipe-card h3 {
+    font-size: 20px;
+}
+
+.pantryRecipeCardIngredientsContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0 16px 0;
+}
+
+.pantryRecipeCardIngredientsContainer h4 {
+    font-size: 18px;
+}
+
+.pantryRecipeCardIngredientsContainer ul li {
+    font-size: 14px;
+    font-weight: normal;
+    list-style-type: circle;
+    text-align: left;
+}
+
+.pantryRecipeCardIngredientsContainer ul {
+}
+
+.pantryRecipeCardCTA {
+    background-color: var(--cta);
+    width: 240px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.pantryRecipeCardCTA:hover {
+    background-color: var(--cta-hover);
+}
+
+.usedIngredientsListContainer, .missingIngredientsListContainer{
+    padding: 0 16px;
 }
 
 .my-pantry-how-to {
@@ -53,6 +115,8 @@ main {
     padding: 1rem;
     gap: 1rem;
     max-height: 90vh;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 .filter-menu {
@@ -61,6 +125,10 @@ main {
     position: absolute;
     top: 122px;
     overflow: scroll;
+}
+
+.filter-menu.active button {
+    cursor: pointer;
 }
 
 .food-category-container {
@@ -84,10 +152,20 @@ main {
     align-items: center;
 }
 
+
+
+.food-item-category-btn:hover{
+    background-color: var(--primary-hover);
+}
+
 .food-list-items-container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+}
+
+.food-list-checkbox {
+    cursor: pointer;
 }
 
 .food-list-item {
@@ -99,11 +177,12 @@ main {
     justify-content: space-between;
     font-size: 14px;
     margin: 8px;
+    font-family: "Poppins", sans-serif;
 }
 
 .find-recipe-btn {
     width: 240px;
-    height: 40px;
+    min-height: 40px;
     border-style: none;
     border-radius: 8px;
     background-color: var(--cta);
@@ -112,4 +191,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.find-recipe-btn:hover {
+    background-color: #4b4b4b;
+}
+
+.check-all-toggle:hover {
+    color: var(--cta-hover);
 }
