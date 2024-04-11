@@ -72,3 +72,7 @@ h2 {
 .recipe-instuctions {
   margin-bottom: 40px;
 }
+
+.summary-more-btn:hover{
+  color: var(--cta-hover)
+}
