@@ -26,7 +26,8 @@ main {
     cursor: pointer;
 }
 
-.btn-toggle-pantry:hover{
+
+.btn-toggle-pantry:hover {
     background-color: var(--primary-hover);
 }
 
@@ -151,6 +152,8 @@ main {
     align-items: center;
 }
 
+
+
 .food-item-category-btn:hover{
     background-color: var(--primary-hover);
 }
@@ -174,6 +177,7 @@ main {
     justify-content: space-between;
     font-size: 14px;
     margin: 8px;
+    font-family: "Poppins", sans-serif;
 }
 
 .find-recipe-btn {
@@ -189,6 +193,10 @@ main {
     justify-content: center;
 }
 
-.find-recipe-btn:hover{
-    background-color: var(--cta-hover);
+.find-recipe-btn:hover {
+    background-color: #4b4b4b;
+}
+
+.check-all-toggle:hover {
+    color: var(--cta-hover);
 }
