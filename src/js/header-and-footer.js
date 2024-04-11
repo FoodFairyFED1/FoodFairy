@@ -65,16 +65,23 @@ export async function getFavourites() {
 function displayFavourites(recipes) {
     favs_container.innerHTML = "";
     recipes.forEach((recipe) => {
+        let href;
+        if (window.location.pathname.includes("index.html")) {
+            href = `pages/recipe-details.html?id=${recipe.id}`;
+        } else {
+            href = `../pages/recipe-details.html?id=${recipe.id}`;
+        }
         favs_container.innerHTML += `
-        <a class="favRecipeCard" href="pages/recipe-details.html?id=${recipe.id}">
-            <div class="favRecipeCardStart">
-                <img class="favRecipeCardImage" src="${recipe.image}">
-            </div>
-            <div class="favRecipeCardEnd">
-                <h3 class="favRecipeCardTitle">${recipe.title}</h3>
-            </div>
-        </a>
+            <a class="favRecipeCard" href="${href}">
+                <div class="favRecipeCardStart">
+                    <img class="favRecipeCardImage" src="${recipe.image}">
+                </div>
+                <div class="favRecipeCardEnd">
+                    <h3 class="favRecipeCardTitle">${recipe.title}</h3>
+                </div>
+            </a>
         `;
     });
 }
+
 
