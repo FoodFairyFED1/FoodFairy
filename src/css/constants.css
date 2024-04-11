@@ -49,4 +49,36 @@ footer {
 
 #start img, #end img {
   cursor: pointer;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+#start img:hover, #end img:hover {
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+  box-shadow: var(--cta) 0px 2px 0px;
+  padding-bottom: 4px;
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform:     translateY(0);
+    transform:         translateY(0)
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform:     translateY(-10px);
+    transform:         translateY(-10px)
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform:     translateY(-5px);
+    transform:         translateY(-5px)
+  }
 }

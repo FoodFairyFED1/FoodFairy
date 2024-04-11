@@ -26,6 +26,10 @@ main {
     cursor: pointer;
 }
 
+.btn-toggle-pantry:hover {
+    background-color: var(--primary-hover);
+}
+
 .pantry-recipes-container {
     width: 100%;
     height: 100%;
@@ -89,6 +93,10 @@ main {
     align-items: center;
 }
 
+.food-item-category-btn:hover {
+    background-color: var(--primary-hover);
+}
+
 .food-list-items-container {
     display: flex;
     flex-direction: column;
@@ -108,6 +116,7 @@ main {
     justify-content: space-between;
     font-size: 14px;
     margin: 8px;
+    font-family: "Poppins", sans-serif;
 }
 
 .find-recipe-btn {
@@ -121,4 +130,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.find-recipe-btn:hover {
+    background-color: #4b4b4b;
+}
+
+.check-all-toggle:hover {
+    color: var(--cta-hover);
 }
