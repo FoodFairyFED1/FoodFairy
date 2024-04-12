@@ -2,7 +2,7 @@
 
 # FoodFairy
 This was the group project for Agency 1 during the second semester of Frontend Development at Noroff School of Technology and Digital Media
-The project is deployed on netlify [here](foodfairy.netlify.app)
+The project is deployed on netlify [here](https://foodfairy.netlify.app)
 
 ## Table of contents:
 - [About](#about)
@@ -45,7 +45,7 @@ The width of the website is capped at a width of 420 px.
 
 ### Deployment:
 
-The site is deployed through Netlify [here](foodfairy.netlify.app)
+The site is deployed through Netlify [here](https://foodfairy.netlify.app)
 
 ## Team members:
 
