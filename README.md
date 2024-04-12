@@ -1,4 +1,4 @@
-<img src="src/assets/images/fairy.png" width="200px" alt="Fairy">
+<img src="src/assets/images/foodfairy-banner.png" width="100%" alt="banner">
 
 # FoodFairy
 This was the group project for Agency 1 during the second semester of Frontend Development at Noroff School of Technology and Digital Media
@@ -27,8 +27,10 @@ FoodFairy is the result of this group project, it is a website were the user can
   * The API will try to find recipes where the user has to get as few additional ingredients as possible.
 * Recipe details page:
   * The recipe details page features recipe instructions and ingredient amounts.
-  * The user can add recipes to favourites accessible from the navbar.
+  ~~~~* The user can~~~~ add recipes to favourites accessible from the navbar.
 * The project features hand drawn images and icons.
+
+<img src="src/assets/images/photos-of-app.png" width="100%" alt="pages">
 
 ## Technical Specification
 
